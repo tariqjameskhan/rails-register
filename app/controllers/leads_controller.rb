@@ -28,7 +28,7 @@ class LeadsController < ApplicationController
       :telephone_number,
       :email_address,
       :linked_in,
-      :githib,
+      :github,
       :follow_up,
       :interview,
       :offer
