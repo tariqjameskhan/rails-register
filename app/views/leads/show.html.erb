@@ -1,0 +1,9 @@
+<div class="container mt-5">
+  <div>
+    <h1>Thanks for registering your details <%= @lead.name %>!</h1>
+  </div>
+
+  <div>
+    <%= link_to 'Add another registration', new_lead_path(@lead), class: 'btn btn-primary' %>
+  </div>
+</div>

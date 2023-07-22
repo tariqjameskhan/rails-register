@@ -1,0 +1,11 @@
+<div class="container mt-5">
+  <h1>index</h1>
+  <% @leads.each do |lead| %>
+    <ul>
+      <li><%= lead.name %></li>
+      <li><%= lead.telephone_number %></li>
+    </ul>
+  <% end %>
+
+  <%= link_to 'Add new lead', new_lead_path(@lead), class: 'btn btn-primary' %>
+</div>
