@@ -1,9 +1,12 @@
 <div class="container mt-5">
-  <div>
-    <h1>Thanks for registering your details <%= @lead.name %>!</h1>
+  <div class="d-flex justify-content-center">
+    <div>
+      <h1 class="text-white">Thanks for registering your details <%= @lead.name %>!</h1>
+    </div>
   </div>
-
-  <div>
-    <%= link_to 'Add another registration', new_lead_path(@lead), class: 'btn btn-primary' %>
+  <div class="mt-5 d-flex justify-content-center">
+    <div class="mt-5">
+      <%= link_to 'Add another registration', new_lead_path(@lead), class: 'btn-big' %>
+    </div>
   </div>
 </div>

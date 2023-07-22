@@ -1,2 +1,18 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<div class="banner">
+  <div class="container">
+    <div class="d-flex justify-content-center">
+      <div class="mt-5">
+        <h1>Welcome to [insert logo here] !</h1>
+        <p class='mt-5'>Please register your details with us <i class="fa-solid fa-arrow-down fa-bounce"></i></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container mt-5">
+  <div class="d-flex justify-content-center">
+    <div>
+      <%= link_to 'Click here to register', new_lead_path(@lead), class: 'btn-big' %>
+    </div>
+  </div>
+</div>
