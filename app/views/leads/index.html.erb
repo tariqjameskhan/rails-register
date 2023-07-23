@@ -18,19 +18,21 @@
           <%= submit_tag "Search", name: "", class: "btn-red ms-3" %>
         <% end %>
       </div>
-      <table class="table bg-white table-striped border rounded">
-        <thead>
-          <tr>
-            <th scope="col"></th>
-            <th scope="col">Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Tel</th>
-            <th scope="col">LinkedIn</th>
-            <th scope="col">GitHub</th>
-          </tr>
-        </thead>
-        <%= render "list", leads: @leads %>
-      </table>
+        <div class="table-responsive">
+          <table class="table table-striped border rounded">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Tel</th>
+                <th scope="col">LinkedIn</th>
+                <th scope="col">GitHub</th>
+              </tr>
+            </thead>
+            <%= render "list", leads: @leads %>
+          </table>
+        </div>
       <div class="m-3 p-3 d-flex justify-content-end">
         <%= link_to 'Add registration', new_lead_path(@lead), class: 'btn-red' %>
       </div>
