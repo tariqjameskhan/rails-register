@@ -19,8 +19,12 @@
               <td class="p-3"><%= lead.name %></td>
               <td class="p-3"><%= lead.email_address %></td>
               <td class="p-3"><%= lead.telephone_number %></td>
-              <td class="p-3"><%= lead.linked_in %></td>
-              <td class="p-3"><%= lead.github %></td>
+              <td class="p-3"><%= link_to(lead.linked_in, lead.linked_in, target: :_blank, class: "table-link") %></td>
+              <td class="p-3">
+                <% if lead.github? %>
+                  <%= link_to(lead.github, lead.github, target: :_blank, class: "table-link") %>
+                <% end %>
+              </td>
             </tr>
           <% end %>
         </tbody>
