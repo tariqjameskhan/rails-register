@@ -6,6 +6,10 @@ class LeadsController < ApplicationController
     if params[:query].present? && !params[:query].empty?
       @leads = @leads.where("name ILIKE ?", "%#{params[:query]}%")
     end
+    respond_to do |format|
+      format.html
+      format.text { render partial: "leads/list", locals: { leads: @leads }, formats: [:html] }
+    end
   end
 
   def show
