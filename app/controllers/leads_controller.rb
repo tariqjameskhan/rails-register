@@ -3,6 +3,9 @@ class LeadsController < ApplicationController
 
   def index
     @leads = Lead.all
+    if params[:query].present? && !params[:query].empty?
+      @leads = @leads.where("name ILIKE ?", "%#{params[:query]}%")
+    end
   end
 
   def show
