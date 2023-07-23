@@ -1,12 +1,17 @@
-<div class="container mt-5">
+<div class="banner">
   <div class="d-flex justify-content-center">
     <div>
-      <h1 class="text-white">Thanks for registering your details <%= @lead.name %>!</h1>
+      <h1 class="text-dark">Thanks for registering your details <%= @lead.name %>!</h1>
     </div>
   </div>
   <div class="mt-5 d-flex justify-content-center">
-    <div class="mt-5">
-      <%= link_to 'Add another registration', new_lead_path(@lead), class: 'btn-big' %>
+    <div class="mb-3">
+      <%= link_to 'Add another registration', new_lead_path(@lead), class: 'btn-red' %>
     </div>
+  </div>
+</div>
+<div class="container mt-5">
+  <div class="d-flex justify-content-center">
+    <%= image_tag("https://gifrific.com/wp-content/uploads/2014/12/Michael-Jordan-Free-Throw-Dunk-Contest.gif") %>
   </div>
 </div>

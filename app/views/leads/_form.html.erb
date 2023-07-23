@@ -4,5 +4,13 @@
   <%= f.input :telephone_number %>
   <%= f.input :linked_in %>
   <%= f.input :github %>
-  <%= f.submit "Register", class: "btn-red mt-4" %>
+  <div class="d-flex justify-content-between">
+    <div>
+      <%= f.submit "Register", class: "btn-red mt-4" %>
+    </div>
+    <div class="">
+      <%= link_to 'Back', root_path, class: 'btn-big mt-4' %>
+    </div>
+  </div>
+
 <% end %>
