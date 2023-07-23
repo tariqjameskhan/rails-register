@@ -1,0 +1,18 @@
+<tbody data-search-names-target="list">
+  <% leads.sort.each do |lead| %>
+    <tr>
+      <th scope="row"></th>
+      <td class="p-3"><%= lead.name %></td>
+      <td class="p-3"><%= lead.email_address %></td>
+      <td class="p-3"><%= lead.telephone_number %></td>
+      <td class="p-3"><%= link_to(lead.linked_in, lead.linked_in, target: :_blank, class: "table-link") %></td>
+      <td class="p-3">
+        <% if lead.github? %>
+          <%= link_to(lead.github, lead.github, target: :_blank, class: "table-link") %>
+        <% end %>
+      </td>
+      <td><%= link_to '<i class="fa-solid fa-pen-to-square"></i>'.html_safe, edit_lead_path(lead), class: "delete-button" %></td>
+      <td><%= link_to '<i class="fas fa-trash"></i>'.html_safe, lead_path(lead), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "delete-button m-3" %></td>
+    </tr>
+  <% end %>
+</tbody>
